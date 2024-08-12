@@ -1,0 +1,145 @@
+/* default css start */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+}
+
+.container {
+  width: 100%;
+  max-width: 1440px;
+  margin: auto;
+  padding: 0 15px;
+}
+
+.header-area {
+  background-color: transparent;
+  background-position: center center;
+  background-size: cover;
+}
+
+/* mobile-first navbar start */
+.navbar-area {
+  background-color: transparent;
+  font-family: "Plus Jakarta Sans", sans-serif;
+  font-weight: 28;
+  font-style: normal;
+  color: #d1ebe0;
+}
+
+.site-navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+}
+
+.nav-toggler {
+  border: 3px solid #d1ebe0;
+  padding: 5px;
+  background-color: transparent;
+  cursor: pointer;
+  height: 39px;
+  display: block;
+  z-index: 1001;
+}
+
+.nav-toggler span,
+.nav-toggler span:before,
+.nav-toggler span:after {
+  width: 28px;
+  height: 3px;
+  background-color: #fff;
+  display: block;
+  transition: 0.3s;
+}
+
+.nav-toggler span:before {
+  content: "";
+  transform: translateY(-9px);
+}
+
+.nav-toggler span:after {
+  content: "";
+  transform: translateY(6px);
+}
+
+.nav-toggler.toggler-open span {
+  background-color: transparent;
+}
+
+.nav-toggler.toggler-open span:before {
+  transform: translateY(0px) rotate(45deg);
+}
+
+.nav-toggler.toggler-open span:after {
+  transform: translateY(-3px) rotate(-45deg);
+}
+
+.nav-menu {
+  position: absolute;
+  top: 60px;
+  left: 0;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.8);
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.3s ease-in-out;
+  flex-direction: column;
+  align-items: center;
+}
+
+.nav-menu li {
+  width: 100%;
+  text-align: center;
+}
+
+.nav-menu li a {
+  color: #fff;
+  padding: 20px;
+  display: block;
+  text-transform: uppercase;
+}
+
+.nav-menu li a:hover {
+  background: rgba(255, 255, 255, 0.1);
+}
+
+.nav-menu.open {
+  max-height: 100vh;
+}
+
+/* mobile-first navbar end */
+
+/* Desktop-version */
+@media screen and (min-width: 768px) {
+  .logo {
+    width: 180px; /* Større logo for desktopversionen */
+  }
+
+  .site-navbar {
+    justify-content: space-between;
+  }
+
+  .site-navbar ul {
+    margin-left: auto; /* Flyt menuen til højre */
+    display: flex;
+    list-style: none;
+  }
+
+  .site-navbar ul li {
+    margin-left: 20px; /* Tilføj lidt mellemrum mellem menuitems */
+  }
+
+  .site-navbar ul li a {
+    font-size: 16px;
+    padding: 10px 15px;
+    text-decoration: none;
+    color: #fff;
+  }
+
+  .site-navbar ul li a:hover {
+    background: rgba(255, 255, 255, 0.1);
+  }
+}

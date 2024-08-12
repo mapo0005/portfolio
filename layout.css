@@ -1,0 +1,107 @@
+.grid-container {
+  display: grid;
+  gap: 0px; /* Afstand mellem elementerne */
+  margin: 0px;
+}
+
+.grid-item {
+  padding: 0px;
+}
+
+/* Desktop layout */
+@media screen and (min-width: 768px) {
+  .grid-container {
+    grid-template-columns: 1fr 1fr; /* To kolonner på større skærme */
+    align-items: start;
+    margin-top: 50px;
+  }
+
+  .text-centered {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+  }
+
+  body {
+    margin-right: 90px;
+    margin-left: 90px;
+  }
+
+  .knap {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 20%;
+    border-radius: 10px;
+    margin-block: 20px;
+  }
+
+  .tekst_under_overskrift {
+    color: #583a13;
+    font-family: "DM Sans", sans-serif;
+    font-size: 1.2rem;
+    text-align: center;
+    width: 65ch;
+    margin: auto;
+  }
+
+  .ene_tekst {
+    color: #583a13;
+    font-family: "DM Sans", sans-serif;
+    font-size: 1.2rem;
+    width: 65ch;
+    margin: auto;
+  }
+
+  p {
+    font-size: 20px;
+  }
+
+  h1 {
+    font-size: 40px;
+  }
+
+  h2 {
+    font-size: 38px;
+  }
+
+  h3 {
+    font-size: 24px;
+  }
+
+  .grid-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+    align-items: center; /* Justerer indholdet vertikalt */
+  }
+
+  .grid-item {
+    display: flex;
+    align-items: center; /* Centrerer tekst vertikalt */
+  }
+
+  .grid-item p {
+    margin: 0; /* Fjerner ekstra margin omkring teksten */
+  }
+
+  .portraet {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 30%;
+    border-radius: 10px;
+    margin-block: 20px;
+  }
+
+  /* Rotationseffekt på logo */
+
+  .rotateImg {
+    height: auto;
+    transition: transform 0.5s ease;
+  }
+
+  .rotateImg:hover {
+    transform: rotate(-180deg);
+  }
+}

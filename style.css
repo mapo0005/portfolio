@@ -1,0 +1,146 @@
+.link {
+  color: #7d2242;
+}
+
+a:hover {
+  color: #605d58;
+}
+
+/* Centrere et billede */
+
+.centrer {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 80%;
+  border-radius: 10px;
+  margin-block: 20px;
+}
+
+.knap {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 40%;
+  border-radius: 10px;
+  margin-block: 20px;
+}
+
+.portraet {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 80%;
+  border-radius: 10px;
+  margin-block: 20px;
+}
+
+.streg {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 80%;
+  border-radius: 10px;
+  margin-block: 20px;
+}
+
+/* Rotationseffekt på logo */
+
+.rotateImg {
+  height: auto;
+  transition: transform 0.5s ease;
+}
+
+.rotateImg:hover {
+  transform: rotate(-180deg);
+}
+
+/* Styling af copy */
+
+p {
+  font-family: "Plus Jakarta Sans", sans-serif;
+  font-weight: 250;
+  font-size: 16px;
+  font-style: normal;
+  color: #505050;
+  gap: 20px;
+  margin-top: 20px;
+  margin-left: 16px;
+  margin-right: 16px;
+  max-width: 65ch;
+}
+
+h1 {
+  font-family: "Press Start 2P", system-ui;
+  font-size: 30px;
+  font-style: normal;
+  color: #7d2242;
+  gap: 20px;
+  margin-top: 20px;
+  margin-left: 16px;
+  margin-right: 16px;
+  max-width: 65ch;
+}
+
+h2 {
+  font-family: "Plus Jakarta Sans", sans-serif;
+  font-weight: 400;
+  font-size: 28px;
+  font-style: normal;
+  color: #79535c;
+  margin-top: 20px;
+  margin-left: 16px;
+  margin-right: 16px;
+  max-width: 65ch;
+}
+
+h3 {
+  font-family: "Plus Jakarta Sans", sans-serif;
+  font-weight: bold;
+  font-size: 19px;
+  text-transform: uppercase;
+  color: #605d58;
+  margin-top: 20px;
+  margin-left: 16px;
+  margin-right: 16px;
+  max-width: 65ch;
+}
+
+/* Footer */
+
+footer {
+  display: flex;
+  flex-direction: column; /* Gør det muligt at centrere elementerne lodret */
+  align-items: center; /* Centrerer elementerne horisontalt */
+  justify-content: center; /* Centrerer elementerne vertikalt, hvis footeren har en højde */
+  text-align: center; /* Sikrer at tekst bliver centreret */
+  padding: 20px;
+}
+
+footer p {
+  margin: 0; /* Fjerner ekstra margin omkring teksten */
+}
+
+footer a {
+  margin-top: 10px; /* Lidt afstand mellem elementerne */
+}
+
+/* Body */
+
+body {
+  background: radial-gradient(#ced6e3, #af7d89) fixed;
+}
+
+.fade_in {
+  animation: fadeInAnimation ease 3s;
+  animation-iteration-count: 1;
+  animation-fill-mode: forwards;
+}
+@keyframes fadeInAnimation {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}

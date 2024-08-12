@@ -1,0 +1,275 @@
+/* Rotationseffekt på logo */
+
+.rotateImg {
+  height: auto;
+  transition: transform 0.5s ease;
+}
+
+.rotateImg:hover {
+  transform: rotate(-180deg);
+}
+
+/* Nyt forsøg på hover-image på Index-siden */
+.hover_img {
+  position: relative;
+  margin-left: 80px;
+}
+
+.hover_img a span {
+  position: fixed;
+  display: none;
+  z-index: 99;
+  left: 50%;
+  top: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  z-index: -1;
+}
+
+.hover_img a:hover span {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Styling af copy */
+
+h1 {
+  font-family: "Plus Jakarta Sans", sans-serif;
+  font-weight: 70;
+  font-style: normal;
+  color: #d1ebe0;
+  gap: 20px;
+  margin-left: 70px;
+  margin-right: 70px;
+}
+
+h2 {
+  font-family: "Press Start 2P", system-ui;
+  font-weight: 400;
+  font-size: 35px;
+  font-style: normal;
+  color: #d1ebe0;
+  margin-block: 20px;
+  margin-top: 20px;
+  margin-left: 70px;
+  margin-right: 70px;
+}
+
+p {
+  font-family: "Plus Jakarta Sans", sans-serif;
+  font-weight: 70;
+  font-style: normal;
+  color: #d1ebe0;
+  gap: 20px;
+  margin-left: 70px;
+  margin-right: 70px;
+}
+
+/* Mediaquery for tekst */
+
+@media screen and (in-width: 800px) {
+  body {
+    font-family: "Hind", sans-serif;
+    background: black;
+    color: white;
+    min-height: 100vh;
+  }
+
+  h1 {
+    font-family: "Plus Jakarta Sans", sans-serif;
+    font-weight: 70;
+    font-style: normal;
+    color: #af7d89;
+    gap: 10px;
+    margin-top: 10px;
+    margin-left: 10px;
+    margin-right: 10px;
+  }
+
+  h2 {
+    font-family: "Press Start 2P", system-ui;
+    font-weight: 400;
+    font-size: 25px;
+    font-style: normal;
+    color: #af7d89;
+    margin-top: 10px;
+    margin-left: 10px;
+    margin-right: 10px;
+  }
+
+  p {
+    font-family: "Plus Jakarta Sans", sans-serif;
+    font-size: larger;
+    font-style: normal;
+    color: #605d58;
+    gap: 10px;
+    margin-top: 10px;
+    margin-left: 10px;
+    margin-right: 10px;
+  }
+
+  .hover_img {
+    display: flex;
+    align-items: center;
+    margin-left: 5px;
+  }
+}
+
+/* Body */
+
+body {
+  background: radial-gradient(#ced6e3, #af7d89) fixed;
+}
+
+body {
+  animation: fadeInAnimation ease 3s;
+  animation-iteration-count: 1;
+  animation-fill-mode: forwards;
+}
+@keyframes fadeInAnimation {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+/* Test af navbar */
+
+/* default css start */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+}
+
+.container {
+  width: 100%;
+  max-width: 1440px;
+  margin: 0 auto;
+  padding: 0 15px;
+}
+.header-area {
+  background-color: transparent;
+  background-position: center center;
+  background-size: cover;
+}
+/* default css end */
+
+/* navbar regular css start */
+.navbar-area {
+  background-color: transparent;
+  font-family: "Plus Jakarta Sans", sans-serif;
+  font-weight: 28;
+  font-style: normal;
+  color: #d1ebe0;
+}
+.site-navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.site-navbar ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: flex;
+  align-items: center;
+}
+.site-navbar ul li a {
+  color: #fff;
+  padding: 20px;
+  display: block;
+  text-decoration: none;
+  text-transform: uppercase;
+}
+.site-navbar ul li a:hover {
+  background: rgba(255, 255, 255, 0.1);
+}
+/* navbar regular css end */
+
+/* nav-toggler css start */
+.nav-toggler {
+  border: 3px solid #d1ebe0;
+  padding: 5px;
+  background-color: transparent;
+  cursor: pointer;
+  height: 39px;
+  display: none;
+}
+.nav-toggler span,
+.nav-toggler span:before,
+.nav-toggler span:after {
+  width: 28px;
+  height: 3px;
+  background-color: #fff;
+  display: block;
+  transition: 0.3s;
+}
+.nav-toggler span:before {
+  content: "";
+  transform: translateY(-9px);
+}
+.nav-toggler span:after {
+  content: "";
+  transform: translateY(6px);
+}
+.nav-toggler.toggler-open span {
+  background-color: transparent;
+}
+.nav-toggler.toggler-open span:before {
+  transform: translateY(0px) rotate(45deg);
+}
+.nav-toggler.toggler-open span:after {
+  transform: translateY(-3px) rotate(-45deg);
+}
+/* nav-toggler css start */
+
+/* mobile breakpoint start */
+@media screen and (max-width: 767px) {
+  .container {
+    max-width: 720px;
+  }
+  /* navbar css for mobile start */
+  .nav-toggler {
+    display: block;
+  }
+  .site-navbar {
+    min-height: 60px;
+  }
+  .site-navbar ul {
+    position: absolute;
+    width: 100%;
+    height: calc(100vh - 60px);
+    left: 0;
+    top: 60px;
+    flex-direction: column;
+    align-items: center;
+    background-color: transparent;
+    max-height: 0;
+    overflow: hidden;
+    transition: 0.3s;
+  }
+  .site-navbar ul li {
+    width: 100%;
+    text-align: center;
+  }
+  .site-navbar ul li a {
+    padding: 25px;
+  }
+  .site-navbar ul li a:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+  }
+  .site-navbar ul.open {
+    max-height: 100vh;
+    overflow: visible;
+  }
+
+  /* navbar css for mobile end */
+}
+/* mobile breakpoint end */
